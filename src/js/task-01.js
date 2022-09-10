@@ -16,18 +16,18 @@
 // Elements: 5
 
 
-const categories = document.querySelectorAll('.item');
+const categories = document.querySelectorAll('#categories .item');
 
-const countCategories = () =>
+
 console.log(`Number of categories: ${categories.length}`);
 
-countCategories();
+
 
 
 const showEachCategory = categories =>
   categories.forEach(category => {
     const headerText = category.firstElementChild.textContent;
-    const showHeaderText = console.log(`Category: ${headerText}`);
+    console.log(`Category: ${headerText}`);
 
       
     const categoryElements = category.querySelectorAll('li');
@@ -35,7 +35,7 @@ const showEachCategory = categories =>
     const showNumberOfElements = console.log(
       `Elements: ${categoryElements.length}`,
     );
-    return showHeaderText, showNumberOfElements;
+    return showNumberOfElements;
   });
 
 showEachCategory(categories);

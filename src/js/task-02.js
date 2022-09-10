@@ -17,17 +17,28 @@ const ingredients = [
 ];
 
 
+
+const ingredientsElList = document.getElementById("ingredients");
+
+
+
 for (let i = 0; i < ingredients.length; i += 1) {
-  const createElItem = document.createElement("li");
-  createElItem.innerHTML = ingredients[i];
-  createElItem.classList.add("item");
-  console.log(createElItem);
+  const ingredientItem = document.createElement("li");
+   ingredientItem.textContent = ingredients[i];
+   ingredientItem.classList.add("item");
+  ingredientsElList.append(ingredientItem)
 
 }
 
+console.log(ingredientsElList);
 
-const createElUl = document.createElement("ul")
-console.log( createElUl);
+
+
+
+
+
+
+
 
 
 
