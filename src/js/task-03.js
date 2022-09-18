@@ -21,6 +21,7 @@ let galleryHtml = "";
 
 images.forEach(element => {
   galleryHtml = galleryHtml + `<li><img src="${element.url}" alt="${element.alt}"></img></li>`;
+  
 
 });
 

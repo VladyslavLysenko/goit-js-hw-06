@@ -11,17 +11,14 @@ const inputName = document.getElementById("name-input");
 const outputname = document.getElementById("name-output");
 
 
+inputName.addEventListener("input",onInput)
 
-
-
-inputName.addEventListener("input", (event) => {
-    if (inputName.value === "") { 
+function onInput () {  if (inputName.value === "") { 
   outputname.textContent =  "Anonymous"
     
     } else {
 
         outputname.textContent = inputName.value;
-        }
-        
-       
-});
+        }}
+  
+
