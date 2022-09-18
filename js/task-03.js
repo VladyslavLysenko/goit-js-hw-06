@@ -20,7 +20,7 @@ console.log(galleryList);
 let galleryHtml = "";
 
 images.forEach(element => {
-  galleryHtml = galleryHtml + `<li><img src="${element.url}" alt="${element.alt}"></img></li>`;
+  galleryHtml = galleryHtml + `<li ><img class ="gallery-item" src="${element.url}" alt="${element.alt}"></img></li>`;
   
 
 });
