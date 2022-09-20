@@ -1,8 +1,8 @@
 
 const input = document.querySelector("input");
-// console.log(input);
+console.log(input.value);
 const btnCreate = document.querySelector("button[data-create]");
-// console.log(btnCreate);
+console.log(btnCreate);
 const btnDestroy = document.querySelector("button[data-destroy]");
 // console.log(btnDestroy);
 const mainDiv = document.querySelector("#boxes");
@@ -17,7 +17,6 @@ function getRandomHexColor() {
 
 
 btnCreate.addEventListener("click", createBoxes)
-
 function createBoxes(amount) {
   amount = input.value;
  
@@ -38,13 +37,22 @@ function createBoxes(amount) {
 btnDestroy.addEventListener("click", destroyboxes)
 
 function destroyboxes() {
-  let removeElem = document.querySelectorAll(".box");
-  // console.log(removeElem);
-  for (let i = 0; i < removeElem.length; i++) {
-    removeElem[i].remove()
-    
-  }
+  
+  mainDiv.innerHTML = "";
+  input.value = "";
 }
+  
+  
+  
+  // let removeElem = document.querySelectorAll(".box");
+
+
+  // console.log(removeElem);
+  // for (let i = 0; i < removeElem.length; i++) {
+  //   removeElem[i].remove()
+    
+  // }
+
 
 
 

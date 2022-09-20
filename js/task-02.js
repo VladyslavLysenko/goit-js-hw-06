@@ -17,20 +17,38 @@ const ingredients = [
 ];
 
 
+// var 1
 
-const ingredientsElList = document.getElementById("ingredients");
+const ingredientsElList = document.querySelector("#ingredients");
+
+const items = ingredients.map(item => {
+  const itemsLi = document.createElement("li");
+  itemsLi.classList.add("item");
+  itemsLi.textContent = item;
+  return itemsLi
+})
+console.log(items);
+console.log(...items);
+ingredientsElList.append(...items)
 
 
 
-for (let i = 0; i < ingredients.length; i += 1) {
-  const ingredientItem = document.createElement("li");
-   ingredientItem.textContent = ingredients[i];
-   ingredientItem.classList.add("item");
-  ingredientsElList.append(ingredientItem)
 
-}
+// var 2
+// const ingredientsElList = document.getElementById("ingredients");
 
-console.log(ingredientsElList);
+
+
+// for (let i = 0; i < ingredients.length; i += 1) {
+//   const ingredientItem = document.createElement("li");
+//    ingredientItem.textContent = ingredients[i];
+//    ingredientItem.classList.add("item");
+//   ingredientsElList.append(ingredientItem)
+
+// }
+
+// console.log(ingredientsElList);
+
 
 
 

@@ -16,29 +16,47 @@
 // Elements: 5
 
 
+"use strict";
 const categories = document.querySelectorAll('#categories .item');
-
 
 console.log(`Number of categories: ${categories.length}`);
 
 
+const categoriesItems = categories.forEach(function (category) {
+  console.log(`Category: ${category.firstElementChild.textContent}`);
+  console.log(`Elements: ${category.lastElementChild.childElementCount}`);
+
+}
+)
 
 
-const showEachCategory = categories =>
-  categories.forEach(category => {
-    const headerText = category.firstElementChild.textContent;
-    console.log(`Category: ${headerText}`);
+
+
+
+// var 1
+// const categories = document.querySelectorAll('#categories .item');
+
+
+// console.log(`Number of categories: ${categories.length}`);
+
+
+
+
+// const showEachCategory = categories =>
+//   categories.forEach(category => {
+//     const headerText = category.firstElementChild.textContent;
+//     console.log(`Category: ${headerText}`);
 
       
-    const categoryElements = category.querySelectorAll('li');
+//     const categoryElements = category.querySelectorAll('li');
   
-    const showNumberOfElements = console.log(
-      `Elements: ${categoryElements.length}`,
-    );
-    return showNumberOfElements;
-  });
+//     const showNumberOfElements = console.log(
+//       `Elements: ${categoryElements.length}`,
+//     );
+//     return showNumberOfElements;
+//   });
 
-showEachCategory(categories);
+// showEachCategory(categories);
 
 
 

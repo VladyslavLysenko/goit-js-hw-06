@@ -10,11 +10,9 @@ function onSubmit(event) {
     password: password.value,
   };
 
-  if (data.email == "") {
-    alert("Поле Email не заполнено!");
-  } else if (data.password == "") {
-    alert("Поле Password не заполнено!");
-  } else {
+  if (data.email == "" || data.password == "" ) {
+    alert("Please fill in all the fields!");
+  }  else {
     console.log(data);
     event.currentTarget.reset();
   }

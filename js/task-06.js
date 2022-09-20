@@ -1,11 +1,14 @@
 const input = document.getElementById("validation-input")
 
 input.addEventListener("blur", onblur)
+  
+function onblur(evt) {
 
-  
-  
-function onblur() {
-  if (input.value.length == input.dataset.length) {
+  const num = Number(input.dataset.length)
+  let markupString = `${evt.currentTarget.value.trim()}`;
+  let markupNumber = Number(markupString.length)
+
+  if (markupNumber === num) {
 
     input.classList.add("valid")
     input.classList.remove("invalid")

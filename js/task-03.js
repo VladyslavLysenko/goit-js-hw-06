@@ -13,24 +13,38 @@ const images = [
   },
 ];
 
+// var 1
 
-const galleryList = document.getElementsByClassName("gallery");
-console.log(galleryList);
+const listEl = document.querySelector(".gallery");
+const markup = images.map((image) => `<li class="gallery-item">
+<img class="gallery" src=${image.url} alt=${image.alt} /></li>`).join("");
+console.log(markup);
+listEl.insertAdjacentHTML("beforeend", markup);
 
-let galleryHtml = "";
 
-images.forEach(element => {
-  galleryHtml = galleryHtml + `<li ><img class ="gallery-item" src="${element.url}" alt="${element.alt}"></img></li>`;
+
+
+
+
+
+// var 2
+// const galleryList = document.getElementsByClassName("gallery");
+// console.log(galleryList);
+
+// let galleryHtml = "";
+
+// images.forEach(element => {
+//   galleryHtml = galleryHtml + `<li ><img class ="gallery-item" src="${element.url}" alt="${element.alt}"></img></li>`;
   
 
-});
+// });
 
 
-const firstGallery = galleryList[0];
-console.log(firstGallery);
+// const firstGallery = galleryList[0];
+// console.log(firstGallery);
 
-firstGallery.insertAdjacentHTML("afterbegin", galleryHtml )
+// firstGallery.insertAdjacentHTML("afterbegin", galleryHtml )
 
 
 
-console.log(galleryHtml);
+// console.log(galleryHtml);
